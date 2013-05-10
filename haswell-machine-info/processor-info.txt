@@ -1,0 +1,101 @@
+[root@intel-sharkbay-dh-03 ~]# dmidecode --type processor
+# dmidecode 2.12
+SMBIOS 2.7 present.
+
+Handle 0x0001, DMI type 4, 42 bytes
+Processor Information
+	Socket Designation: U3E1
+	Type: Central Processor
+	Family: Core i5
+	Manufacturer: Intel(R) Corporation
+	ID: C3 06 03 00 FF FB EB BF
+	Signature: Type 0, Family 6, Model 60, Stepping 3
+	Flags:
+		FPU (Floating-point unit on-chip)
+		VME (Virtual mode extension)
+		DE (Debugging extension)
+		PSE (Page size extension)
+		TSC (Time stamp counter)
+		MSR (Model specific registers)
+		PAE (Physical address extension)
+		MCE (Machine check exception)
+		CX8 (CMPXCHG8 instruction supported)
+		APIC (On-chip APIC hardware supported)
+		SEP (Fast system call)
+		MTRR (Memory type range registers)
+		PGE (Page global enable)
+		MCA (Machine check architecture)
+		CMOV (Conditional move instruction supported)
+		PAT (Page attribute table)
+		PSE-36 (36-bit page size extension)
+		CLFSH (CLFLUSH instruction supported)
+		DS (Debug store)
+		ACPI (ACPI supported)
+		MMX (MMX technology supported)
+		FXSR (FXSAVE and FXSTOR instructions supported)
+		SSE (Streaming SIMD extensions)
+		SSE2 (Streaming SIMD extensions 2)
+		SS (Self-snoop)
+		HTT (Multi-threading)
+		TM (Thermal monitor supported)
+		PBE (Pending break enabled)
+	Version: Intel(R) Core(TM) i5-4670T CPU @ 2.30GHz
+	Voltage: 0.9 V
+	External Clock: 100 MHz
+	Max Speed: 2300 MHz
+	Current Speed: 2300 MHz
+	Status: Populated, Enabled
+	Upgrade: Other
+	L1 Cache Handle: 0x0003
+	L2 Cache Handle: 0x0004
+	L3 Cache Handle: 0x0005
+	Serial Number: To Be Filled By O.E.M.
+	Asset Tag: To Be Filled By O.E.M.
+	Part Number: To Be Filled By O.E.M.
+	Core Count: 4
+	Core Enabled: 4
+	Thread Count: 4
+	Characteristics:
+		64-bit capable
+
+[root@intel-sharkbay-dh-03 ~]# 
+
+
+[root@intel-sharkbay-dh-03 ~]# dmidecode --type baseboard
+# dmidecode 2.12
+SMBIOS 2.7 present.
+
+Handle 0x0011, DMI type 2, 16 bytes
+Base Board Information
+	Manufacturer: Intel Corp.
+	Product Name: Flathead Creek Crb
+	Version: 2
+	Serial Number: 1
+	Asset Tag: Base Board Asset Tag
+	Features:
+		Board is a hosting board
+		Board is replaceable
+	Location In Chassis: Part Component
+	Chassis Handle: 0x0000
+	Type: Unknown
+	Contained Object Handles: 0
+
+Handle 0x0046, DMI type 10, 6 bytes
+On Board Device Information
+	Type: Video
+	Status: Enabled
+	Description: To Be Filled by O.E.M.
+
+Handle 0x0047, DMI type 10, 6 bytes
+On Board Device Information
+	Type: Ethernet
+	Status: Disabled
+	Description: To Be Filled by O.E.M.
+
+Handle 0x0048, DMI type 10, 6 bytes
+On Board Device Information
+	Type: Sound
+	Status: Enabled
+	Description: To Be Filled by O.E.M.
+
+

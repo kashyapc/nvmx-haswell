@@ -1,0 +1,184 @@
+=== fpaste 0.3.7.1 System Information (fpaste --sysinfo) ===
+* OS Release (cat /etc/*-release | uniq):
+     Fedora release 19 (Schrödinger’s Cat)
+     NAME=Fedora
+     VERSION="19 (Schrödinger’s Cat)"
+     ID=fedora
+     VERSION_ID=19
+     PRETTY_NAME="Fedora 19 (Schrödinger’s Cat)"
+     ANSI_COLOR="0;34"
+     CPE_NAME="cpe:/o:fedoraproject:fedora:19"
+     Fedora release 19 (Schrödinger’s Cat)
+     
+* Kernel (uname -r ; cat /proc/cmdline):
+     3.9.0-301.fc19.x86_64
+     BOOT_IMAGE=/vmlinuz-3.9.0-301.fc19.x86_64 root=/dev/mapper/fedora_intel--sharkbay--dh--03-root ro rd.md=0 rd.dm=0 console=ttyS0,115200n81 rd.lvm.lv=fedora_intel-sharkbay-dh-03/swap rd.luks=0 rd.lvm.lv=fedora_intel-sharkbay-dh-03/root vconsole.keymap=us LANG=en_US.UTF-8
+     
+* Desktop(s) Running (failed: "ps -eo comm= | egrep '(gnome-session|kdeinit|xfce.?-session|fluxbox|blackbox|hackedbox|ratpoison|enlightenment|icewm-session|od-session|wmaker|wmx|openbox-lxde|openbox-gnome-session|openbox-kde-session|mwm|e16|fvwm|xmonad|sugar-session)' "):
+     N/A
+
+* Desktop(s) Installed (failed: "ls -m /usr/share/xsessions/ | sed 's/\.desktop//g' "):
+     N/A
+
+* SELinux Status (sestatus):
+     SELinux status:                 enabled
+     SELinuxfs mount:                /sys/fs/selinux
+     SELinux root directory:         /etc/selinux
+     Loaded policy name:             targeted
+     Current mode:                   enforcing
+     Mode from config file:          enforcing
+     Policy MLS status:              enabled
+     Policy deny_unknown status:     allowed
+     Max kernel policy version:      28
+     
+* SELinux Error Count (failed: "selinuxenabled && (grep avc: /var/log/messages; ausearch -m avc -ts today)2>/dev/null|egrep -o "comm=\"[^ ]+"|sort|uniq -c|sort -rn"):
+     N/A
+
+* CPU Model (grep 'model name' /proc/cpuinfo | awk -F: '{print $2}' | uniq -c | sed -re 's/^ +//' ):
+     4  Intel(R) Core(TM) i5-4670T CPU @ 2.30GHz
+     
+* 64-bit Support (grep -q ' lm ' /proc/cpuinfo && echo Yes || echo No):
+     Yes
+     
+* Hardware Virtualization Support (egrep -q '(vmx|svm)' /proc/cpuinfo && echo Yes || echo No):
+     Yes
+     
+* Load average (uptime):
+      02:48:18 up 15:30,  2 users,  load average: 0.00, 0.02, 0.05
+     
+* Memory usage (free -m):
+                  total       used       free     shared    buffers     cached
+     Mem:          7746       1564       6181          0         29        388
+     -/+ buffers/cache:       1146       6599
+     Swap:         7759          0       7759
+     
+* Top 5 CPU hogs (ps axuScnh | awk '$2!=9235' | sort -rnk3 | head -5):
+          107  4205  0.5 11.6 6642420 921976 ?      Sl   May06   3:43 qemu-system-x86
+            0     1  0.2  0.0  51072  7276 ?        Ss   May06   2:17 systemd
+           99   964  0.0  0.0  15512   876 ?        S    May06   0:01 dnsmasq
+          998   857  0.0  0.1 371764  9500 ?        Ssl  May06   0:00 polkitd
+           81   470  0.0  0.0  32672  1992 ?        Ssl  May06   0:00 dbus-daemon
+     
+* Top 5 Memory hogs (ps axuScnh | sort -rnk4 | head -5):
+          107  4205  0.5 11.6 6642420 921976 ?      Sl   May06   3:43 qemu-system-x86
+            0   867  0.0  0.2 1090984 20908 ?       Ssl  May06   0:14 libvirtd
+            0   462  0.0  0.2 322816 18812 ?        Ssl  May06   0:00 firewalld
+          998   857  0.0  0.1 371764  9500 ?        Ssl  May06   0:00 polkitd
+            0  9235  0.0  0.1 201600 10096 pts/1    S+   02:48   0:00 python
+     
+* Disk space usage (df -hT):
+     Filesystem                                      Type      Size  Used Avail Use% Mounted on
+     /dev/mapper/fedora_intel--sharkbay--dh--03-root ext4       50G  2.2G   45G   5% /
+     devtmpfs                                        devtmpfs  3.8G     0  3.8G   0% /dev
+     tmpfs                                           tmpfs     3.8G     0  3.8G   0% /dev/shm
+     tmpfs                                           tmpfs     3.8G  628K  3.8G   1% /run
+     tmpfs                                           tmpfs     3.8G     0  3.8G   0% /sys/fs/cgroup
+     tmpfs                                           tmpfs     3.8G  4.0K  3.8G   1% /tmp
+     /dev/sda1                                       ext4      477M   97M  355M  22% /boot
+     /dev/mapper/fedora_intel--sharkbay--dh--03-home ext4      402G  151G  231G  40% /home
+     
+* Block devices (blkid):
+     /dev/sda1: UUID="ffa7121b-f4b9-4bab-a1b4-095c6e5eef7b" TYPE="ext4" 
+     /dev/sda2: UUID="OsUNMX-b3WQ-behn-yKcG-4cEv-kWz2-DZm0vE" TYPE="LVM2_member" 
+     /dev/mapper/fedora_intel--sharkbay--dh--03-swap: UUID="f8a2b9ac-18f6-41f2-9a5f-7ecd17af1bcf" TYPE="swap" 
+     /dev/mapper/fedora_intel--sharkbay--dh--03-root: UUID="21a75476-6f84-4f1b-ab92-be7c42d5b8c2" TYPE="ext4" 
+     /dev/mapper/fedora_intel--sharkbay--dh--03-home: UUID="6304fbe4-c1cf-4957-b75f-1f88d8c3538c" TYPE="ext4" 
+     
+* PCI devices (lspci):
+     00:00.0 Host bridge: Intel Corporation Haswell DRAM Controller (rev 06)
+     00:02.0 VGA compatible controller: Intel Corporation Haswell Integrated Graphics Controller (rev 06)
+     00:03.0 Audio device: Intel Corporation Haswell HD Audio Controller (rev 06)
+     00:14.0 USB controller: Intel Corporation Lynx Point USB xHCI Host Controller (rev 04)
+     00:16.0 Communication controller: Intel Corporation Lynx Point MEI Controller #1 (rev 04)
+     00:16.3 Serial controller: Intel Corporation Lynx Point KT Controller (rev 04)
+     00:19.0 Ethernet controller: Intel Corporation Ethernet Connection I217-LM (rev 04)
+     00:1a.0 USB controller: Intel Corporation Lynx Point USB Enhanced Host Controller #2 (rev 04)
+     00:1b.0 Audio device: Intel Corporation Lynx Point High Definition Audio Controller (rev 04)
+     00:1c.0 PCI bridge: Intel Corporation Lynx Point PCI Express Root Port #5 (rev d4)
+     00:1c.6 PCI bridge: Intel Corporation Lynx Point PCI Express Root Port #7 (rev d4)
+     00:1d.0 USB controller: Intel Corporation Lynx Point USB Enhanced Host Controller #1 (rev 04)
+     00:1f.0 ISA bridge: Intel Corporation Lynx Point LPC Controller (rev 04)
+     00:1f.2 SATA controller: Intel Corporation Lynx Point 6-port SATA Controller 1 [AHCI mode] (rev 04)
+     00:1f.3 SMBus: Intel Corporation Lynx Point SMBus Controller (rev 04)
+     01:00.0 Network controller: Intel Corporation Centrino Advanced-N 6205 [Taylor Peak] (rev 34)
+     
+* USB devices (failed: "lsusb" AND "/sbin/lsusb"):
+     N/A
+
+* DRM Information (failed: "grep drm /var/log/dmesg"):
+     N/A
+
+* Xorg modules (grep LoadModule /var/log/Xorg.0.log | cut -d \" -f 2 | xargs):
+     
+     
+* GL Support (failed: "glxinfo | egrep "OpenGL version|OpenGL renderer""):
+     N/A
+
+* Xorg errors (failed: "grep '^\[.*(EE)' /var/log/Xorg.0.log"):
+     N/A
+
+* Kernel buffer tail (dmesg | tail):
+     [12748.051200] cgroup: libvirtd (898) created nested cgroup for controller "perf_event" which has incomplete hierarchy support. Nested cgroups may change behavior in the future.
+     [12748.093650] device vnet0 entered promiscuous mode
+     [12748.106189] br0: port 2(vnet0) entered forwarding state
+     [12748.112134] br0: port 2(vnet0) entered forwarding state
+     [13788.937380] br0: port 2(vnet0) entered disabled state
+     [13788.943207] device vnet0 left promiscuous mode
+     [13788.948275] br0: port 2(vnet0) entered disabled state
+     [13790.035264] device vnet0 entered promiscuous mode
+     [13790.046059] br0: port 2(vnet0) entered forwarding state
+     [13790.052030] br0: port 2(vnet0) entered forwarding state
+     
+* Last few reboots (last -x -n10 reboot runlevel):
+     runlevel (to lvl 3)   3.9.0-301.fc19.x Mon May  6 11:18 - 02:48  (15:29)    
+     reboot   system boot  3.9.0-301.fc19.x Mon May  6 11:17 - 02:48  (15:30)    
+     runlevel (to lvl 3)   3.9.0-301.fc19.x Mon May  6 11:13 - 11:17  (00:03)    
+     reboot   system boot  3.9.0-301.fc19.x Mon May  6 11:13 - 11:17  (00:03)    
+     runlevel (to lvl 3)   3.9.0-301.fc19.x Mon May  6 09:50 - 11:12  (01:22)    
+     reboot   system boot  3.9.0-301.fc19.x Mon May  6 09:49 - 11:12  (01:22)    
+     runlevel (to lvl 3)   3.9.0-301.fc19.x Mon May  6 06:15 - 09:48  (03:33)    
+     reboot   system boot  3.9.0-301.fc19.x Mon May  6 06:15 - 09:48  (03:33)    
+     runlevel (to lvl 3)   3.9.0-301.fc19.x Mon May  6 06:11 - 06:13  (00:02)    
+     reboot   system boot  3.9.0-301.fc19.x Mon May  6 06:11 - 06:13  (00:02)    
+     
+     wtmp begins Mon Apr 22 03:36:40 2013
+     
+* YUM Repositories (yum -C repolist):
+     repo id                          repo name                                status
+     fedora/19/x86_64                 Fedora 19 - x86_64                       35,558
+     updates/19/x86_64                Fedora 19 - x86_64 - Updates                  0
+     updates-testing/19/x86_64        Fedora 19 - x86_64 - Test Updates        11,053
+     repolist: 46,611
+     
+* YUM Extras (yum -C list extras):
+     Extra Packages
+     kernel.x86_64                    3.9.0-0.rc5.git1.301.fc19      @fedora         
+     kernel.x86_64                    3.9.0-0.rc7.git3.1.fc19        @updates-testing
+     kernel-devel.x86_64              3.9.0-0.rc7.git3.1.fc19        @updates-testing
+     kernel-modules-extra.x86_64      3.9.0-0.rc7.git3.1.fc19        @updates-testing
+     libreport-filesystem.x86_64      2.1.4-1.fc19                   @updates-testing
+     unbound-libs.x86_64              1.4.20-7.fc19                  @updates-testing
+     
+* Last 20 packages installed (rpm -qa --nodigest --nosignature --last | head -20):
+     netcf-0.2.3-4.fc19.x86_64                     Mon 06 May 2013 08:21:34 AM EDT
+     net-tools-2.0-0.6.20130109git.fc19.x86_64     Mon 06 May 2013 08:16:31 AM EDT
+     bridge-utils-1.5-7.fc19.x86_64                Mon 06 May 2013 07:57:01 AM EDT
+     vim-enhanced-7.3.822-1.fc19.x86_64            Mon 06 May 2013 07:44:10 AM EDT
+     gpm-libs-1.20.6-31.fc19.x86_64                Mon 06 May 2013 07:44:10 AM EDT
+     vim-common-7.3.822-1.fc19.x86_64              Mon 06 May 2013 07:44:09 AM EDT
+     vim-filesystem-7.3.822-1.fc19.x86_64          Mon 06 May 2013 07:44:07 AM EDT
+     sysfsutils-2.1.0-13.fc19.x86_64               Mon 06 May 2013 05:50:13 AM EDT
+     kernel-modules-extra-3.9.0-301.fc19.x86_64    Mon 06 May 2013 04:08:07 AM EDT
+     libguestfs-tools-1.21.35-1.fc19.x86_64        Mon 06 May 2013 04:08:06 AM EDT
+     perl-Sys-Guestfs-1.21.35-1.fc19.x86_64        Mon 06 May 2013 04:08:05 AM EDT
+     libguestfs-tools-c-1.21.35-1.fc19.x86_64      Mon 06 May 2013 04:08:05 AM EDT
+     libguestfs-1.21.35-1.fc19.x86_64              Mon 06 May 2013 04:08:04 AM EDT
+     kernel-3.9.0-301.fc19.x86_64                  Mon 06 May 2013 04:08:00 AM EDT
+     kernel-devel-3.9.0-301.fc19.x86_64            Mon 06 May 2013 04:07:28 AM EDT
+     redhat-rpm-config-9.1.0-43.fc19.noarch        Mon 06 May 2013 04:07:22 AM EDT
+     logrotate-3.8.4-1.fc19.x86_64                 Mon 06 May 2013 04:07:20 AM EDT
+     kernel-headers-3.9.0-301.fc19.x86_64          Mon 06 May 2013 04:07:19 AM EDT
+     diffstat-1.57-1.fc19.x86_64                   Mon 06 May 2013 04:07:19 AM EDT
+     tmux-1.8-1.fc19.x86_64                        Mon 06 May 2013 04:07:18 AM EDT
+     
+

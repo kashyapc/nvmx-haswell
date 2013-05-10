@@ -1,0 +1,102 @@
+Basic VMX Information
+  Revision                                 18
+  VMCS size                                1024
+  VMCS restricted to 32 bit addresses      no
+  Dual-monitor support                     yes
+  VMCS memory type                         6
+  INS/OUTS instruction information         yes
+  IA32_VMX_TRUE_*_CTLS support             yes
+pin-based controls
+  External interrupt exiting               yes
+  NMI exiting                              yes
+  Virtual NMIs                             yes
+  Activate VMX-preemption timer            yes
+  Process posted interrupts                no
+primary processor-based controls
+  Interrupt window exiting                 yes
+  Use TSC offsetting                       yes
+  HLT exiting                              yes
+  INVLPG exiting                           yes
+  MWAIT exiting                            yes
+  RDPMC exiting                            yes
+  RDTSC exiting                            yes
+  CR3-load exiting                         default
+  CR3-store exiting                        default
+  CR8-load exiting                         yes
+  CR8-store exiting                        yes
+  Use TPR shadow                           yes
+  NMI-window exiting                       yes
+  MOV-DR exiting                           yes
+  Unconditional I/O exiting                yes
+  Use I/O bitmaps                          yes
+  Monitor trap flag                        yes
+  Use MSR bitmaps                          yes
+  MONITOR exiting                          yes
+  PAUSE exiting                            yes
+  Activate secondary control               yes
+secondary processor-based controls
+  Virtualize APIC accesses                 yes
+  Enable EPT                               yes
+  Descriptor-table exiting                 yes
+  Enable RDTSCP                            yes
+  Virtualize x2APIC mode                   yes
+  Enable VPID                              yes
+  WBINVD exiting                           yes
+  Unrestricted guest                       yes
+  APIC register emulation                  no
+  Virtual interrupt delivery               no
+  PAUSE-loop exiting                       yes
+  RDRAND exiting                           yes
+  Enable INVPCID                           yes
+  Enable VM functions                      yes
+  VMCS shadowing                           yes
+  EPT-violation #VE                        no
+VM-Exit controls
+  Save debug controls                      default
+  Host address-space size                  yes
+  Load IA32_PERF_GLOBAL_CTRL               yes
+  Acknowledge interrupt on exit            yes
+  Save IA32_PAT                            yes
+  Load IA32_PAT                            yes
+  Save IA32_EFER                           yes
+  Load IA32_EFER                           yes
+  Save VMX-preemption timer value          yes
+VM-Entry controls
+  Load debug controls                      default
+  IA-64 mode guest                         yes
+  Entry to SMM                             yes
+  Deactivate dual-monitor treatment        yes
+  Load IA32_PERF_GLOBAL_CTRL               yes
+  Load IA32_PAT                            yes
+  Load IA32_EFER                           yes
+Miscellaneous data
+  VMX-preemption timer scale (log2)        5
+  Store EFER.LMA into IA-32e mode guest control yes
+  HLT activity state                       yes
+  Shutdown activity state                  yes
+  Wait-for-SIPI activity state             yes
+  IA32_SMBASE support                      yes
+  Number of CR3-target values              4
+  MSR-load/store count recommenation       0
+  IA32_SMM_MONITOR_CTL[2] can be set to 1  yes
+  VMWRITE to VM-exit information fields    yes
+  MSEG revision identifier                 0
+VPID and EPT capabilities
+  Execute-only EPT translations            yes
+  Page-walk length 4                       yes
+  Paging-structure memory type UC          yes
+  Paging-structure memory type WB          yes
+  2MB EPT pages                            yes
+  1GB EPT pages                            yes
+  INVEPT supported                         yes
+  EPT accessed and dirty flags             yes
+  Single-context INVEPT                    yes
+  All-context INVEPT                       yes
+  INVVPID supported                        yes
+  Individual-address INVVPID               yes
+  Single-context INVVPID                   yes
+  All-context INVVPID                      yes
+  Single-context-retaining-globals INVVPID yes
+VM Functions
+  EPTP Switching                           yes
+

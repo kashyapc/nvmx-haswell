@@ -1,0 +1,1144 @@
+CPU 0:
+   vendor_id = "GenuineIntel"
+   version information (1/eax):
+      processor type  = primary processor (0)
+      family          = Intel Pentium Pro/II/III/Celeron/Core/Core 2/Atom, AMD Athlon/Duron, Cyrix M2, VIA C3 (6)
+      model           = 0xc (12)
+      stepping id     = 0x3 (3)
+      extended family = 0x0 (0)
+      extended model  = 0x3 (3)
+      (simple synth)  = Intel Pentium II / Pentium III / Pentium M / Celeron / Celeron M / Core / Core 2 / Core i / Xeon / Atom (unknown model)
+   miscellaneous (1/ebx):
+      process local APIC physical ID = 0x0 (0)
+      cpu count                      = 0x10 (16)
+      CLFLUSH line size              = 0x8 (8)
+      brand index                    = 0x0 (0)
+   brand id = 0x00 (0): unknown
+   feature information (1/edx):
+      x87 FPU on chip                        = true
+      virtual-8086 mode enhancement          = true
+      debugging extensions                   = true
+      page size extensions                   = true
+      time stamp counter                     = true
+      RDMSR and WRMSR support                = true
+      physical address extensions            = true
+      machine check exception                = true
+      CMPXCHG8B inst.                        = true
+      APIC on chip                           = true
+      SYSENTER and SYSEXIT                   = true
+      memory type range registers            = true
+      PTE global bit                         = true
+      machine check architecture             = true
+      conditional move/compare instruction   = true
+      page attribute table                   = true
+      page size extension                    = true
+      processor serial number                = false
+      CLFLUSH instruction                    = true
+      debug store                            = true
+      thermal monitor and clock ctrl         = true
+      MMX Technology                         = true
+      FXSAVE/FXRSTOR                         = true
+      SSE extensions                         = true
+      SSE2 extensions                        = true
+      self snoop                             = true
+      hyper-threading / multi-core supported = true
+      therm. monitor                         = true
+      IA64                                   = false
+      pending break event                    = true
+   feature information (1/ecx):
+      PNI/SSE3: Prescott New Instructions     = true
+      PCLMULDQ instruction                    = true
+      64-bit debug store                      = true
+      MONITOR/MWAIT                           = true
+      CPL-qualified debug store               = true
+      VMX: virtual machine extensions         = true
+      SMX: safer mode extensions              = true
+      Enhanced Intel SpeedStep Technology     = true
+      thermal monitor 2                       = true
+      SSSE3 extensions                        = true
+      context ID: adaptive or shared L1 data  = false
+      FMA instruction                         = true
+      CMPXCHG16B instruction                  = true
+      xTPR disable                            = true
+      perfmon and debug                       = true
+      process context identifiers             = true
+      direct cache access                     = false
+      SSE4.1 extensions                       = true
+      SSE4.2 extensions                       = true
+      extended xAPIC support                  = true
+      MOVBE instruction                       = true
+      POPCNT instruction                      = true
+      time stamp counter deadline             = true
+      AES instruction                         = true
+      XSAVE/XSTOR states                      = true
+      OS-enabled XSAVE/XSTOR                  = true
+      AVX: advanced vector extensions         = true
+      F16C half-precision convert instruction = true
+      RDRAND instruction                      = true
+      hypervisor guest status                 = false
+   cache and TLB information (2):
+      0x63: unknown
+      0x03: data TLB: 4K pages, 4-way, 64 entries
+      0x76: instruction TLB: 2M/4M pages, fully, 8 entries
+      0xff: cache data is in CPUID 4
+      0xb6: unknown
+      0xf0: 64 byte prefetching
+      0xc1: unknown
+   processor serial number: 0003-06C3-0000-0000-0000-0000
+   deterministic cache parameters (4):
+      --- cache 0 ---
+      cache type                           = data cache (1)
+      cache level                          = 0x1 (1)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 63
+      --- cache 1 ---
+      cache type                           = instruction cache (2)
+      cache level                          = 0x1 (1)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 63
+      --- cache 2 ---
+      cache type                           = unified cache (3)
+      cache level                          = 0x2 (2)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 511
+      --- cache 3 ---
+      cache type                           = unified cache (3)
+      cache level                          = 0x3 (3)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0xf (15)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0xb (11)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = true
+      complex cache indexing               = true
+      number of sets - 1 (s)               = 8191
+   MONITOR/MWAIT (5):
+      smallest monitor-line size (bytes)       = 0x40 (64)
+      largest monitor-line size (bytes)        = 0x40 (64)
+      enum of Monitor-MWAIT exts supported     = true
+      supports intrs as break-event for MWAIT  = true
+      number of C0 sub C-states using MWAIT    = 0x0 (0)
+      number of C1 sub C-states using MWAIT    = 0x2 (2)
+      number of C2 sub C-states using MWAIT    = 0x1 (1)
+      number of C3/C6 sub C-states using MWAIT = 0x2 (2)
+      number of C4/C7 sub C-states using MWAIT = 0x4 (4)
+   Thermal and Power Management Features (6):
+      digital thermometer                     = true
+      Intel Turbo Boost Technology            = true
+      ARAT always running APIC timer          = true
+      PLN power limit notification            = true
+      ECMD extended clock modulation duty     = true
+      PTM package thermal management          = true
+      digital thermometer thresholds          = 0x2 (2)
+      ACNT/MCNT supported performance measure = true
+      ACNT2 available                         = false
+      performance-energy bias capability      = true
+   extended feature flags (7):
+      FSGSBASE instructions                   = true
+      BMI instruction                         = true
+      SMEP support                            = true
+      enhanced REP MOVSB/STOSB                = true
+      INVPCID instruction                     = true
+   Direct Cache Access Parameters (9):
+      PLATFORM_DCA_CAP MSR bits = 0
+   Architecture Performance Monitoring Features (0xa/eax):
+      version ID                               = 0x3 (3)
+      number of counters per logical processor = 0x8 (8)
+      bit width of counter                     = 0x30 (48)
+      length of EBX bit vector                 = 0x7 (7)
+   Architecture Performance Monitoring Features (0xa/ebx):
+      core cycle event not available           = false
+      instruction retired event not available  = false
+      reference cycles event not available     = false
+      last-level cache ref event not available = false
+      last-level cache miss event not avail    = false
+      branch inst retired event not available  = false
+      branch mispred retired event not avail   = false
+   Architecture Performance Monitoring Features (0xa/edx):
+      number of fixed counters    = 0x3 (3)
+      bit width of fixed counters = 0x30 (48)
+   x2APIC features / processor topology (0xb):
+      --- level 0 (thread) ---
+      bits to shift APIC ID to get next = 0x1 (1)
+      logical processors at this level  = 0x1 (1)
+      level number                      = 0x0 (0)
+      level type                        = thread (1)
+      extended APIC ID                  = 0
+      --- level 1 (core) ---
+      bits to shift APIC ID to get next = 0x4 (4)
+      logical processors at this level  = 0x4 (4)
+      level number                      = 0x1 (1)
+      level type                        = core (2)
+      extended APIC ID                  = 0
+   0x0000000c 0x00: eax=0x00000000 ebx=0x00000000 ecx=0x00000000 edx=0x00000000
+   XSAVE features (0xd/0):
+      XCR0 lower 32 bits valid bit field mask = 0x00000007
+      bytes required by fields in XCR0        = 0x00000340 (832)
+      bytes required by XSAVE/XRSTOR area     = 0x00000340 (832)
+      XCR0 upper 32 bits valid bit field mask = 0x00000000
+   YMM features (0xd/2):
+      YMM save state byte size                = 0x00000100 (256)
+      YMM save state byte offset              = 0x00000240 (576)
+   LWP features (0xd/0x3e):
+      LWP save state byte size                = 0x00000000 (0)
+      LWP save state byte offset              = 0x00000000 (0)
+   hypervisor_id = "@  @      "
+   extended feature flags (0x80000001/edx):
+      SYSCALL and SYSRET instructions        = true
+      execution disable                      = true
+      1-GB large page support                = true
+      RDTSCP                                 = true
+      64-bit extensions technology available = true
+   Intel feature flags (0x80000001/ecx):
+      LAHF/SAHF supported in 64-bit mode = true
+   brand = "Intel(R) Core(TM) i5-4670T CPU @ 2.30GHz"
+   L1 TLB/cache information: 2M/4M pages & L1 TLB (0x80000005/eax):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = 0x0 (0)
+      data # entries            = 0x0 (0)
+      data associativity        = 0x0 (0)
+   L1 TLB/cache information: 4K pages & L1 TLB (0x80000005/ebx):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = 0x0 (0)
+      data # entries            = 0x0 (0)
+      data associativity        = 0x0 (0)
+   L1 data cache information (0x80000005/ecx):
+      line size (bytes) = 0x0 (0)
+      lines per tag     = 0x0 (0)
+      associativity     = 0x0 (0)
+      size (Kb)         = 0x0 (0)
+   L1 instruction cache information (0x80000005/edx):
+      line size (bytes) = 0x0 (0)
+      lines per tag     = 0x0 (0)
+      associativity     = 0x0 (0)
+      size (Kb)         = 0x0 (0)
+   L2 TLB/cache information: 2M/4M pages & L2 TLB (0x80000006/eax):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = L2 off (0)
+      data # entries            = 0x0 (0)
+      data associativity        = L2 off (0)
+   L2 TLB/cache information: 4K pages & L2 TLB (0x80000006/ebx):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = L2 off (0)
+      data # entries            = 0x0 (0)
+      data associativity        = L2 off (0)
+   L2 unified cache information (0x80000006/ecx):
+      line size (bytes) = 0x40 (64)
+      lines per tag     = 0x0 (0)
+      associativity     = 8-way (6)
+      size (Kb)         = 0x100 (256)
+   L3 cache information (0x80000006/edx):
+      line size (bytes)     = 0x0 (0)
+      lines per tag         = 0x0 (0)
+      associativity         = L2 off (0)
+      size (in 512Kb units) = 0x0 (0)
+   Advanced Power Management Features (0x80000007/edx):
+      temperature sensing diode      = false
+      frequency ID (FID) control     = false
+      voltage ID (VID) control       = false
+      thermal trip (TTP)             = false
+      thermal monitor (TM)           = false
+      software thermal control (STC) = false
+      100 MHz multiplier control     = false
+      hardware P-State control       = false
+      TscInvariant                   = true
+   Physical Address and Linear Address Size (0x80000008/eax):
+      maximum physical address bits         = 0x27 (39)
+      maximum linear (virtual) address bits = 0x30 (48)
+      maximum guest physical address bits   = 0x0 (0)
+   Logical CPU cores (0x80000008/ecx):
+      number of CPU cores - 1 = 0x0 (0)
+      ApicIdCoreIdSize        = 0x0 (0)
+   (multi-processing synth): multi-core (c=4)
+   (multi-processing method): Intel leaf 0xb
+   (APIC widths synth): CORE_width=4 SMT_width=1
+   (APIC synth): PKG_ID=0 CORE_ID=0 SMT_ID=0
+   (synth) = Intel Core (unknown model)
+CPU 1:
+   vendor_id = "GenuineIntel"
+   version information (1/eax):
+      processor type  = primary processor (0)
+      family          = Intel Pentium Pro/II/III/Celeron/Core/Core 2/Atom, AMD Athlon/Duron, Cyrix M2, VIA C3 (6)
+      model           = 0xc (12)
+      stepping id     = 0x3 (3)
+      extended family = 0x0 (0)
+      extended model  = 0x3 (3)
+      (simple synth)  = Intel Pentium II / Pentium III / Pentium M / Celeron / Celeron M / Core / Core 2 / Core i / Xeon / Atom (unknown model)
+   miscellaneous (1/ebx):
+      process local APIC physical ID = 0x2 (2)
+      cpu count                      = 0x10 (16)
+      CLFLUSH line size              = 0x8 (8)
+      brand index                    = 0x0 (0)
+   brand id = 0x00 (0): unknown
+   feature information (1/edx):
+      x87 FPU on chip                        = true
+      virtual-8086 mode enhancement          = true
+      debugging extensions                   = true
+      page size extensions                   = true
+      time stamp counter                     = true
+      RDMSR and WRMSR support                = true
+      physical address extensions            = true
+      machine check exception                = true
+      CMPXCHG8B inst.                        = true
+      APIC on chip                           = true
+      SYSENTER and SYSEXIT                   = true
+      memory type range registers            = true
+      PTE global bit                         = true
+      machine check architecture             = true
+      conditional move/compare instruction   = true
+      page attribute table                   = true
+      page size extension                    = true
+      processor serial number                = false
+      CLFLUSH instruction                    = true
+      debug store                            = true
+      thermal monitor and clock ctrl         = true
+      MMX Technology                         = true
+      FXSAVE/FXRSTOR                         = true
+      SSE extensions                         = true
+      SSE2 extensions                        = true
+      self snoop                             = true
+      hyper-threading / multi-core supported = true
+      therm. monitor                         = true
+      IA64                                   = false
+      pending break event                    = true
+   feature information (1/ecx):
+      PNI/SSE3: Prescott New Instructions     = true
+      PCLMULDQ instruction                    = true
+      64-bit debug store                      = true
+      MONITOR/MWAIT                           = true
+      CPL-qualified debug store               = true
+      VMX: virtual machine extensions         = true
+      SMX: safer mode extensions              = true
+      Enhanced Intel SpeedStep Technology     = true
+      thermal monitor 2                       = true
+      SSSE3 extensions                        = true
+      context ID: adaptive or shared L1 data  = false
+      FMA instruction                         = true
+      CMPXCHG16B instruction                  = true
+      xTPR disable                            = true
+      perfmon and debug                       = true
+      process context identifiers             = true
+      direct cache access                     = false
+      SSE4.1 extensions                       = true
+      SSE4.2 extensions                       = true
+      extended xAPIC support                  = true
+      MOVBE instruction                       = true
+      POPCNT instruction                      = true
+      time stamp counter deadline             = true
+      AES instruction                         = true
+      XSAVE/XSTOR states                      = true
+      OS-enabled XSAVE/XSTOR                  = true
+      AVX: advanced vector extensions         = true
+      F16C half-precision convert instruction = true
+      RDRAND instruction                      = true
+      hypervisor guest status                 = false
+   cache and TLB information (2):
+      0x63: unknown
+      0x03: data TLB: 4K pages, 4-way, 64 entries
+      0x76: instruction TLB: 2M/4M pages, fully, 8 entries
+      0xff: cache data is in CPUID 4
+      0xb6: unknown
+      0xf0: 64 byte prefetching
+      0xc1: unknown
+   processor serial number: 0003-06C3-0000-0000-0000-0000
+   deterministic cache parameters (4):
+      --- cache 0 ---
+      cache type                           = data cache (1)
+      cache level                          = 0x1 (1)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 63
+      --- cache 1 ---
+      cache type                           = instruction cache (2)
+      cache level                          = 0x1 (1)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 63
+      --- cache 2 ---
+      cache type                           = unified cache (3)
+      cache level                          = 0x2 (2)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 511
+      --- cache 3 ---
+      cache type                           = unified cache (3)
+      cache level                          = 0x3 (3)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0xf (15)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0xb (11)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = true
+      complex cache indexing               = true
+      number of sets - 1 (s)               = 8191
+   MONITOR/MWAIT (5):
+      smallest monitor-line size (bytes)       = 0x40 (64)
+      largest monitor-line size (bytes)        = 0x40 (64)
+      enum of Monitor-MWAIT exts supported     = true
+      supports intrs as break-event for MWAIT  = true
+      number of C0 sub C-states using MWAIT    = 0x0 (0)
+      number of C1 sub C-states using MWAIT    = 0x2 (2)
+      number of C2 sub C-states using MWAIT    = 0x1 (1)
+      number of C3/C6 sub C-states using MWAIT = 0x2 (2)
+      number of C4/C7 sub C-states using MWAIT = 0x4 (4)
+   Thermal and Power Management Features (6):
+      digital thermometer                     = true
+      Intel Turbo Boost Technology            = true
+      ARAT always running APIC timer          = true
+      PLN power limit notification            = true
+      ECMD extended clock modulation duty     = true
+      PTM package thermal management          = true
+      digital thermometer thresholds          = 0x2 (2)
+      ACNT/MCNT supported performance measure = true
+      ACNT2 available                         = false
+      performance-energy bias capability      = true
+   extended feature flags (7):
+      FSGSBASE instructions                   = true
+      BMI instruction                         = true
+      SMEP support                            = true
+      enhanced REP MOVSB/STOSB                = true
+      INVPCID instruction                     = true
+   Direct Cache Access Parameters (9):
+      PLATFORM_DCA_CAP MSR bits = 0
+   Architecture Performance Monitoring Features (0xa/eax):
+      version ID                               = 0x3 (3)
+      number of counters per logical processor = 0x8 (8)
+      bit width of counter                     = 0x30 (48)
+      length of EBX bit vector                 = 0x7 (7)
+   Architecture Performance Monitoring Features (0xa/ebx):
+      core cycle event not available           = false
+      instruction retired event not available  = false
+      reference cycles event not available     = false
+      last-level cache ref event not available = false
+      last-level cache miss event not avail    = false
+      branch inst retired event not available  = false
+      branch mispred retired event not avail   = false
+   Architecture Performance Monitoring Features (0xa/edx):
+      number of fixed counters    = 0x3 (3)
+      bit width of fixed counters = 0x30 (48)
+   x2APIC features / processor topology (0xb):
+      --- level 0 (thread) ---
+      bits to shift APIC ID to get next = 0x1 (1)
+      logical processors at this level  = 0x1 (1)
+      level number                      = 0x0 (0)
+      level type                        = thread (1)
+      extended APIC ID                  = 2
+      --- level 1 (core) ---
+      bits to shift APIC ID to get next = 0x4 (4)
+      logical processors at this level  = 0x4 (4)
+      level number                      = 0x1 (1)
+      level type                        = core (2)
+      extended APIC ID                  = 2
+   0x0000000c 0x00: eax=0x00000000 ebx=0x00000000 ecx=0x00000000 edx=0x00000000
+   XSAVE features (0xd/0):
+      XCR0 lower 32 bits valid bit field mask = 0x00000007
+      bytes required by fields in XCR0        = 0x00000340 (832)
+      bytes required by XSAVE/XRSTOR area     = 0x00000340 (832)
+      XCR0 upper 32 bits valid bit field mask = 0x00000000
+   YMM features (0xd/2):
+      YMM save state byte size                = 0x00000100 (256)
+      YMM save state byte offset              = 0x00000240 (576)
+   LWP features (0xd/0x3e):
+      LWP save state byte size                = 0x00000000 (0)
+      LWP save state byte offset              = 0x00000000 (0)
+   hypervisor_id = "@  @      "
+   extended feature flags (0x80000001/edx):
+      SYSCALL and SYSRET instructions        = true
+      execution disable                      = true
+      1-GB large page support                = true
+      RDTSCP                                 = true
+      64-bit extensions technology available = true
+   Intel feature flags (0x80000001/ecx):
+      LAHF/SAHF supported in 64-bit mode = true
+   brand = "Intel(R) Core(TM) i5-4670T CPU @ 2.30GHz"
+   L1 TLB/cache information: 2M/4M pages & L1 TLB (0x80000005/eax):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = 0x0 (0)
+      data # entries            = 0x0 (0)
+      data associativity        = 0x0 (0)
+   L1 TLB/cache information: 4K pages & L1 TLB (0x80000005/ebx):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = 0x0 (0)
+      data # entries            = 0x0 (0)
+      data associativity        = 0x0 (0)
+   L1 data cache information (0x80000005/ecx):
+      line size (bytes) = 0x0 (0)
+      lines per tag     = 0x0 (0)
+      associativity     = 0x0 (0)
+      size (Kb)         = 0x0 (0)
+   L1 instruction cache information (0x80000005/edx):
+      line size (bytes) = 0x0 (0)
+      lines per tag     = 0x0 (0)
+      associativity     = 0x0 (0)
+      size (Kb)         = 0x0 (0)
+   L2 TLB/cache information: 2M/4M pages & L2 TLB (0x80000006/eax):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = L2 off (0)
+      data # entries            = 0x0 (0)
+      data associativity        = L2 off (0)
+   L2 TLB/cache information: 4K pages & L2 TLB (0x80000006/ebx):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = L2 off (0)
+      data # entries            = 0x0 (0)
+      data associativity        = L2 off (0)
+   L2 unified cache information (0x80000006/ecx):
+      line size (bytes) = 0x40 (64)
+      lines per tag     = 0x0 (0)
+      associativity     = 8-way (6)
+      size (Kb)         = 0x100 (256)
+   L3 cache information (0x80000006/edx):
+      line size (bytes)     = 0x0 (0)
+      lines per tag         = 0x0 (0)
+      associativity         = L2 off (0)
+      size (in 512Kb units) = 0x0 (0)
+   Advanced Power Management Features (0x80000007/edx):
+      temperature sensing diode      = false
+      frequency ID (FID) control     = false
+      voltage ID (VID) control       = false
+      thermal trip (TTP)             = false
+      thermal monitor (TM)           = false
+      software thermal control (STC) = false
+      100 MHz multiplier control     = false
+      hardware P-State control       = false
+      TscInvariant                   = true
+   Physical Address and Linear Address Size (0x80000008/eax):
+      maximum physical address bits         = 0x27 (39)
+      maximum linear (virtual) address bits = 0x30 (48)
+      maximum guest physical address bits   = 0x0 (0)
+   Logical CPU cores (0x80000008/ecx):
+      number of CPU cores - 1 = 0x0 (0)
+      ApicIdCoreIdSize        = 0x0 (0)
+   (multi-processing synth): multi-core (c=4)
+   (multi-processing method): Intel leaf 0xb
+   (APIC widths synth): CORE_width=4 SMT_width=1
+   (APIC synth): PKG_ID=0 CORE_ID=1 SMT_ID=0
+   (synth) = Intel Core (unknown model)
+CPU 2:
+   vendor_id = "GenuineIntel"
+   version information (1/eax):
+      processor type  = primary processor (0)
+      family          = Intel Pentium Pro/II/III/Celeron/Core/Core 2/Atom, AMD Athlon/Duron, Cyrix M2, VIA C3 (6)
+      model           = 0xc (12)
+      stepping id     = 0x3 (3)
+      extended family = 0x0 (0)
+      extended model  = 0x3 (3)
+      (simple synth)  = Intel Pentium II / Pentium III / Pentium M / Celeron / Celeron M / Core / Core 2 / Core i / Xeon / Atom (unknown model)
+   miscellaneous (1/ebx):
+      process local APIC physical ID = 0x4 (4)
+      cpu count                      = 0x10 (16)
+      CLFLUSH line size              = 0x8 (8)
+      brand index                    = 0x0 (0)
+   brand id = 0x00 (0): unknown
+   feature information (1/edx):
+      x87 FPU on chip                        = true
+      virtual-8086 mode enhancement          = true
+      debugging extensions                   = true
+      page size extensions                   = true
+      time stamp counter                     = true
+      RDMSR and WRMSR support                = true
+      physical address extensions            = true
+      machine check exception                = true
+      CMPXCHG8B inst.                        = true
+      APIC on chip                           = true
+      SYSENTER and SYSEXIT                   = true
+      memory type range registers            = true
+      PTE global bit                         = true
+      machine check architecture             = true
+      conditional move/compare instruction   = true
+      page attribute table                   = true
+      page size extension                    = true
+      processor serial number                = false
+      CLFLUSH instruction                    = true
+      debug store                            = true
+      thermal monitor and clock ctrl         = true
+      MMX Technology                         = true
+      FXSAVE/FXRSTOR                         = true
+      SSE extensions                         = true
+      SSE2 extensions                        = true
+      self snoop                             = true
+      hyper-threading / multi-core supported = true
+      therm. monitor                         = true
+      IA64                                   = false
+      pending break event                    = true
+   feature information (1/ecx):
+      PNI/SSE3: Prescott New Instructions     = true
+      PCLMULDQ instruction                    = true
+      64-bit debug store                      = true
+      MONITOR/MWAIT                           = true
+      CPL-qualified debug store               = true
+      VMX: virtual machine extensions         = true
+      SMX: safer mode extensions              = true
+      Enhanced Intel SpeedStep Technology     = true
+      thermal monitor 2                       = true
+      SSSE3 extensions                        = true
+      context ID: adaptive or shared L1 data  = false
+      FMA instruction                         = true
+      CMPXCHG16B instruction                  = true
+      xTPR disable                            = true
+      perfmon and debug                       = true
+      process context identifiers             = true
+      direct cache access                     = false
+      SSE4.1 extensions                       = true
+      SSE4.2 extensions                       = true
+      extended xAPIC support                  = true
+      MOVBE instruction                       = true
+      POPCNT instruction                      = true
+      time stamp counter deadline             = true
+      AES instruction                         = true
+      XSAVE/XSTOR states                      = true
+      OS-enabled XSAVE/XSTOR                  = true
+      AVX: advanced vector extensions         = true
+      F16C half-precision convert instruction = true
+      RDRAND instruction                      = true
+      hypervisor guest status                 = false
+   cache and TLB information (2):
+      0x63: unknown
+      0x03: data TLB: 4K pages, 4-way, 64 entries
+      0x76: instruction TLB: 2M/4M pages, fully, 8 entries
+      0xff: cache data is in CPUID 4
+      0xb6: unknown
+      0xf0: 64 byte prefetching
+      0xc1: unknown
+   processor serial number: 0003-06C3-0000-0000-0000-0000
+   deterministic cache parameters (4):
+      --- cache 0 ---
+      cache type                           = data cache (1)
+      cache level                          = 0x1 (1)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 63
+      --- cache 1 ---
+      cache type                           = instruction cache (2)
+      cache level                          = 0x1 (1)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 63
+      --- cache 2 ---
+      cache type                           = unified cache (3)
+      cache level                          = 0x2 (2)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 511
+      --- cache 3 ---
+      cache type                           = unified cache (3)
+      cache level                          = 0x3 (3)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0xf (15)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0xb (11)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = true
+      complex cache indexing               = true
+      number of sets - 1 (s)               = 8191
+   MONITOR/MWAIT (5):
+      smallest monitor-line size (bytes)       = 0x40 (64)
+      largest monitor-line size (bytes)        = 0x40 (64)
+      enum of Monitor-MWAIT exts supported     = true
+      supports intrs as break-event for MWAIT  = true
+      number of C0 sub C-states using MWAIT    = 0x0 (0)
+      number of C1 sub C-states using MWAIT    = 0x2 (2)
+      number of C2 sub C-states using MWAIT    = 0x1 (1)
+      number of C3/C6 sub C-states using MWAIT = 0x2 (2)
+      number of C4/C7 sub C-states using MWAIT = 0x4 (4)
+   Thermal and Power Management Features (6):
+      digital thermometer                     = true
+      Intel Turbo Boost Technology            = true
+      ARAT always running APIC timer          = true
+      PLN power limit notification            = true
+      ECMD extended clock modulation duty     = true
+      PTM package thermal management          = true
+      digital thermometer thresholds          = 0x2 (2)
+      ACNT/MCNT supported performance measure = true
+      ACNT2 available                         = false
+      performance-energy bias capability      = true
+   extended feature flags (7):
+      FSGSBASE instructions                   = true
+      BMI instruction                         = true
+      SMEP support                            = true
+      enhanced REP MOVSB/STOSB                = true
+      INVPCID instruction                     = true
+   Direct Cache Access Parameters (9):
+      PLATFORM_DCA_CAP MSR bits = 0
+   Architecture Performance Monitoring Features (0xa/eax):
+      version ID                               = 0x3 (3)
+      number of counters per logical processor = 0x8 (8)
+      bit width of counter                     = 0x30 (48)
+      length of EBX bit vector                 = 0x7 (7)
+   Architecture Performance Monitoring Features (0xa/ebx):
+      core cycle event not available           = false
+      instruction retired event not available  = false
+      reference cycles event not available     = false
+      last-level cache ref event not available = false
+      last-level cache miss event not avail    = false
+      branch inst retired event not available  = false
+      branch mispred retired event not avail   = false
+   Architecture Performance Monitoring Features (0xa/edx):
+      number of fixed counters    = 0x3 (3)
+      bit width of fixed counters = 0x30 (48)
+   x2APIC features / processor topology (0xb):
+      --- level 0 (thread) ---
+      bits to shift APIC ID to get next = 0x1 (1)
+      logical processors at this level  = 0x1 (1)
+      level number                      = 0x0 (0)
+      level type                        = thread (1)
+      extended APIC ID                  = 4
+      --- level 1 (core) ---
+      bits to shift APIC ID to get next = 0x4 (4)
+      logical processors at this level  = 0x4 (4)
+      level number                      = 0x1 (1)
+      level type                        = core (2)
+      extended APIC ID                  = 4
+   0x0000000c 0x00: eax=0x00000000 ebx=0x00000000 ecx=0x00000000 edx=0x00000000
+   XSAVE features (0xd/0):
+      XCR0 lower 32 bits valid bit field mask = 0x00000007
+      bytes required by fields in XCR0        = 0x00000340 (832)
+      bytes required by XSAVE/XRSTOR area     = 0x00000340 (832)
+      XCR0 upper 32 bits valid bit field mask = 0x00000000
+   YMM features (0xd/2):
+      YMM save state byte size                = 0x00000100 (256)
+      YMM save state byte offset              = 0x00000240 (576)
+   LWP features (0xd/0x3e):
+      LWP save state byte size                = 0x00000000 (0)
+      LWP save state byte offset              = 0x00000000 (0)
+   hypervisor_id = "@  @      "
+   extended feature flags (0x80000001/edx):
+      SYSCALL and SYSRET instructions        = true
+      execution disable                      = true
+      1-GB large page support                = true
+      RDTSCP                                 = true
+      64-bit extensions technology available = true
+   Intel feature flags (0x80000001/ecx):
+      LAHF/SAHF supported in 64-bit mode = true
+   brand = "Intel(R) Core(TM) i5-4670T CPU @ 2.30GHz"
+   L1 TLB/cache information: 2M/4M pages & L1 TLB (0x80000005/eax):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = 0x0 (0)
+      data # entries            = 0x0 (0)
+      data associativity        = 0x0 (0)
+   L1 TLB/cache information: 4K pages & L1 TLB (0x80000005/ebx):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = 0x0 (0)
+      data # entries            = 0x0 (0)
+      data associativity        = 0x0 (0)
+   L1 data cache information (0x80000005/ecx):
+      line size (bytes) = 0x0 (0)
+      lines per tag     = 0x0 (0)
+      associativity     = 0x0 (0)
+      size (Kb)         = 0x0 (0)
+   L1 instruction cache information (0x80000005/edx):
+      line size (bytes) = 0x0 (0)
+      lines per tag     = 0x0 (0)
+      associativity     = 0x0 (0)
+      size (Kb)         = 0x0 (0)
+   L2 TLB/cache information: 2M/4M pages & L2 TLB (0x80000006/eax):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = L2 off (0)
+      data # entries            = 0x0 (0)
+      data associativity        = L2 off (0)
+   L2 TLB/cache information: 4K pages & L2 TLB (0x80000006/ebx):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = L2 off (0)
+      data # entries            = 0x0 (0)
+      data associativity        = L2 off (0)
+   L2 unified cache information (0x80000006/ecx):
+      line size (bytes) = 0x40 (64)
+      lines per tag     = 0x0 (0)
+      associativity     = 8-way (6)
+      size (Kb)         = 0x100 (256)
+   L3 cache information (0x80000006/edx):
+      line size (bytes)     = 0x0 (0)
+      lines per tag         = 0x0 (0)
+      associativity         = L2 off (0)
+      size (in 512Kb units) = 0x0 (0)
+   Advanced Power Management Features (0x80000007/edx):
+      temperature sensing diode      = false
+      frequency ID (FID) control     = false
+      voltage ID (VID) control       = false
+      thermal trip (TTP)             = false
+      thermal monitor (TM)           = false
+      software thermal control (STC) = false
+      100 MHz multiplier control     = false
+      hardware P-State control       = false
+      TscInvariant                   = true
+   Physical Address and Linear Address Size (0x80000008/eax):
+      maximum physical address bits         = 0x27 (39)
+      maximum linear (virtual) address bits = 0x30 (48)
+      maximum guest physical address bits   = 0x0 (0)
+   Logical CPU cores (0x80000008/ecx):
+      number of CPU cores - 1 = 0x0 (0)
+      ApicIdCoreIdSize        = 0x0 (0)
+   (multi-processing synth): multi-core (c=4)
+   (multi-processing method): Intel leaf 0xb
+   (APIC widths synth): CORE_width=4 SMT_width=1
+   (APIC synth): PKG_ID=0 CORE_ID=2 SMT_ID=0
+   (synth) = Intel Core (unknown model)
+CPU 3:
+   vendor_id = "GenuineIntel"
+   version information (1/eax):
+      processor type  = primary processor (0)
+      family          = Intel Pentium Pro/II/III/Celeron/Core/Core 2/Atom, AMD Athlon/Duron, Cyrix M2, VIA C3 (6)
+      model           = 0xc (12)
+      stepping id     = 0x3 (3)
+      extended family = 0x0 (0)
+      extended model  = 0x3 (3)
+      (simple synth)  = Intel Pentium II / Pentium III / Pentium M / Celeron / Celeron M / Core / Core 2 / Core i / Xeon / Atom (unknown model)
+   miscellaneous (1/ebx):
+      process local APIC physical ID = 0x6 (6)
+      cpu count                      = 0x10 (16)
+      CLFLUSH line size              = 0x8 (8)
+      brand index                    = 0x0 (0)
+   brand id = 0x00 (0): unknown
+   feature information (1/edx):
+      x87 FPU on chip                        = true
+      virtual-8086 mode enhancement          = true
+      debugging extensions                   = true
+      page size extensions                   = true
+      time stamp counter                     = true
+      RDMSR and WRMSR support                = true
+      physical address extensions            = true
+      machine check exception                = true
+      CMPXCHG8B inst.                        = true
+      APIC on chip                           = true
+      SYSENTER and SYSEXIT                   = true
+      memory type range registers            = true
+      PTE global bit                         = true
+      machine check architecture             = true
+      conditional move/compare instruction   = true
+      page attribute table                   = true
+      page size extension                    = true
+      processor serial number                = false
+      CLFLUSH instruction                    = true
+      debug store                            = true
+      thermal monitor and clock ctrl         = true
+      MMX Technology                         = true
+      FXSAVE/FXRSTOR                         = true
+      SSE extensions                         = true
+      SSE2 extensions                        = true
+      self snoop                             = true
+      hyper-threading / multi-core supported = true
+      therm. monitor                         = true
+      IA64                                   = false
+      pending break event                    = true
+   feature information (1/ecx):
+      PNI/SSE3: Prescott New Instructions     = true
+      PCLMULDQ instruction                    = true
+      64-bit debug store                      = true
+      MONITOR/MWAIT                           = true
+      CPL-qualified debug store               = true
+      VMX: virtual machine extensions         = true
+      SMX: safer mode extensions              = true
+      Enhanced Intel SpeedStep Technology     = true
+      thermal monitor 2                       = true
+      SSSE3 extensions                        = true
+      context ID: adaptive or shared L1 data  = false
+      FMA instruction                         = true
+      CMPXCHG16B instruction                  = true
+      xTPR disable                            = true
+      perfmon and debug                       = true
+      process context identifiers             = true
+      direct cache access                     = false
+      SSE4.1 extensions                       = true
+      SSE4.2 extensions                       = true
+      extended xAPIC support                  = true
+      MOVBE instruction                       = true
+      POPCNT instruction                      = true
+      time stamp counter deadline             = true
+      AES instruction                         = true
+      XSAVE/XSTOR states                      = true
+      OS-enabled XSAVE/XSTOR                  = true
+      AVX: advanced vector extensions         = true
+      F16C half-precision convert instruction = true
+      RDRAND instruction                      = true
+      hypervisor guest status                 = false
+   cache and TLB information (2):
+      0x63: unknown
+      0x03: data TLB: 4K pages, 4-way, 64 entries
+      0x76: instruction TLB: 2M/4M pages, fully, 8 entries
+      0xff: cache data is in CPUID 4
+      0xb6: unknown
+      0xf0: 64 byte prefetching
+      0xc1: unknown
+   processor serial number: 0003-06C3-0000-0000-0000-0000
+   deterministic cache parameters (4):
+      --- cache 0 ---
+      cache type                           = data cache (1)
+      cache level                          = 0x1 (1)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 63
+      --- cache 1 ---
+      cache type                           = instruction cache (2)
+      cache level                          = 0x1 (1)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 63
+      --- cache 2 ---
+      cache type                           = unified cache (3)
+      cache level                          = 0x2 (2)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0x1 (1)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0x7 (7)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = false
+      complex cache indexing               = false
+      number of sets - 1 (s)               = 511
+      --- cache 3 ---
+      cache type                           = unified cache (3)
+      cache level                          = 0x3 (3)
+      self-initializing cache level        = true
+      fully associative cache              = false
+      extra threads sharing this cache     = 0xf (15)
+      extra processor cores on this die    = 0x7 (7)
+      system coherency line size           = 0x3f (63)
+      physical line partitions             = 0x0 (0)
+      ways of associativity                = 0xb (11)
+      WBINVD/INVD behavior on lower caches = false
+      inclusive to lower caches            = true
+      complex cache indexing               = true
+      number of sets - 1 (s)               = 8191
+   MONITOR/MWAIT (5):
+      smallest monitor-line size (bytes)       = 0x40 (64)
+      largest monitor-line size (bytes)        = 0x40 (64)
+      enum of Monitor-MWAIT exts supported     = true
+      supports intrs as break-event for MWAIT  = true
+      number of C0 sub C-states using MWAIT    = 0x0 (0)
+      number of C1 sub C-states using MWAIT    = 0x2 (2)
+      number of C2 sub C-states using MWAIT    = 0x1 (1)
+      number of C3/C6 sub C-states using MWAIT = 0x2 (2)
+      number of C4/C7 sub C-states using MWAIT = 0x4 (4)
+   Thermal and Power Management Features (6):
+      digital thermometer                     = true
+      Intel Turbo Boost Technology            = true
+      ARAT always running APIC timer          = true
+      PLN power limit notification            = true
+      ECMD extended clock modulation duty     = true
+      PTM package thermal management          = true
+      digital thermometer thresholds          = 0x2 (2)
+      ACNT/MCNT supported performance measure = true
+      ACNT2 available                         = false
+      performance-energy bias capability      = true
+   extended feature flags (7):
+      FSGSBASE instructions                   = true
+      BMI instruction                         = true
+      SMEP support                            = true
+      enhanced REP MOVSB/STOSB                = true
+      INVPCID instruction                     = true
+   Direct Cache Access Parameters (9):
+      PLATFORM_DCA_CAP MSR bits = 0
+   Architecture Performance Monitoring Features (0xa/eax):
+      version ID                               = 0x3 (3)
+      number of counters per logical processor = 0x8 (8)
+      bit width of counter                     = 0x30 (48)
+      length of EBX bit vector                 = 0x7 (7)
+   Architecture Performance Monitoring Features (0xa/ebx):
+      core cycle event not available           = false
+      instruction retired event not available  = false
+      reference cycles event not available     = false
+      last-level cache ref event not available = false
+      last-level cache miss event not avail    = false
+      branch inst retired event not available  = false
+      branch mispred retired event not avail   = false
+   Architecture Performance Monitoring Features (0xa/edx):
+      number of fixed counters    = 0x3 (3)
+      bit width of fixed counters = 0x30 (48)
+   x2APIC features / processor topology (0xb):
+      --- level 0 (thread) ---
+      bits to shift APIC ID to get next = 0x1 (1)
+      logical processors at this level  = 0x1 (1)
+      level number                      = 0x0 (0)
+      level type                        = thread (1)
+      extended APIC ID                  = 6
+      --- level 1 (core) ---
+      bits to shift APIC ID to get next = 0x4 (4)
+      logical processors at this level  = 0x4 (4)
+      level number                      = 0x1 (1)
+      level type                        = core (2)
+      extended APIC ID                  = 6
+   0x0000000c 0x00: eax=0x00000000 ebx=0x00000000 ecx=0x00000000 edx=0x00000000
+   XSAVE features (0xd/0):
+      XCR0 lower 32 bits valid bit field mask = 0x00000007
+      bytes required by fields in XCR0        = 0x00000340 (832)
+      bytes required by XSAVE/XRSTOR area     = 0x00000340 (832)
+      XCR0 upper 32 bits valid bit field mask = 0x00000000
+   YMM features (0xd/2):
+      YMM save state byte size                = 0x00000100 (256)
+      YMM save state byte offset              = 0x00000240 (576)
+   LWP features (0xd/0x3e):
+      LWP save state byte size                = 0x00000000 (0)
+      LWP save state byte offset              = 0x00000000 (0)
+   hypervisor_id = "@  @      "
+   extended feature flags (0x80000001/edx):
+      SYSCALL and SYSRET instructions        = true
+      execution disable                      = true
+      1-GB large page support                = true
+      RDTSCP                                 = true
+      64-bit extensions technology available = true
+   Intel feature flags (0x80000001/ecx):
+      LAHF/SAHF supported in 64-bit mode = true
+   brand = "Intel(R) Core(TM) i5-4670T CPU @ 2.30GHz"
+   L1 TLB/cache information: 2M/4M pages & L1 TLB (0x80000005/eax):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = 0x0 (0)
+      data # entries            = 0x0 (0)
+      data associativity        = 0x0 (0)
+   L1 TLB/cache information: 4K pages & L1 TLB (0x80000005/ebx):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = 0x0 (0)
+      data # entries            = 0x0 (0)
+      data associativity        = 0x0 (0)
+   L1 data cache information (0x80000005/ecx):
+      line size (bytes) = 0x0 (0)
+      lines per tag     = 0x0 (0)
+      associativity     = 0x0 (0)
+      size (Kb)         = 0x0 (0)
+   L1 instruction cache information (0x80000005/edx):
+      line size (bytes) = 0x0 (0)
+      lines per tag     = 0x0 (0)
+      associativity     = 0x0 (0)
+      size (Kb)         = 0x0 (0)
+   L2 TLB/cache information: 2M/4M pages & L2 TLB (0x80000006/eax):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = L2 off (0)
+      data # entries            = 0x0 (0)
+      data associativity        = L2 off (0)
+   L2 TLB/cache information: 4K pages & L2 TLB (0x80000006/ebx):
+      instruction # entries     = 0x0 (0)
+      instruction associativity = L2 off (0)
+      data # entries            = 0x0 (0)
+      data associativity        = L2 off (0)
+   L2 unified cache information (0x80000006/ecx):
+      line size (bytes) = 0x40 (64)
+      lines per tag     = 0x0 (0)
+      associativity     = 8-way (6)
+      size (Kb)         = 0x100 (256)
+   L3 cache information (0x80000006/edx):
+      line size (bytes)     = 0x0 (0)
+      lines per tag         = 0x0 (0)
+      associativity         = L2 off (0)
+      size (in 512Kb units) = 0x0 (0)
+   Advanced Power Management Features (0x80000007/edx):
+      temperature sensing diode      = false
+      frequency ID (FID) control     = false
+      voltage ID (VID) control       = false
+      thermal trip (TTP)             = false
+      thermal monitor (TM)           = false
+      software thermal control (STC) = false
+      100 MHz multiplier control     = false
+      hardware P-State control       = false
+      TscInvariant                   = true
+   Physical Address and Linear Address Size (0x80000008/eax):
+      maximum physical address bits         = 0x27 (39)
+      maximum linear (virtual) address bits = 0x30 (48)
+      maximum guest physical address bits   = 0x0 (0)
+   Logical CPU cores (0x80000008/ecx):
+      number of CPU cores - 1 = 0x0 (0)
+      ApicIdCoreIdSize        = 0x0 (0)
+   (multi-processing synth): multi-core (c=4)
+   (multi-processing method): Intel leaf 0xb
+   (APIC widths synth): CORE_width=4 SMT_width=1
+   (APIC synth): PKG_ID=0 CORE_ID=3 SMT_ID=0
+   (synth) = Intel Core (unknown model)
