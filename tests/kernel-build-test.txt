@@ -1,0 +1,92 @@
+Test1: Build kernel (defconfig) on L2 w/ VMCS Shadowing
+=======================================================
+
+Setup info:
+-----------
+
+L0:
+    - 4 pCPU, 8G pMEM.
+    - Version:
+        $ uname -r; rpm -q qemu-kvm libvirt-daemon-kvm libguestfs
+        3.10.0-0.rc0.git26.1.fc20.x86_64
+        qemu-kvm-1.4.1-1.fc19.x86_64
+        libvirt-daemon-kvm-1.0.5-2.fc19.x86_64
+        libguestfs-1.21.35-1.fc19.x86_64
+
+    - KVM parameters:
+        $ cat /sys/module/kvm_intel/parameters/nested
+        Y
+        $ cat /sys/module/kvm_intel/parameters/enable_shadow_vmcs
+        Y
+        $ cat /sys/module/kvm_intel/parameters/enable_apicv
+        N
+        $ cat /sys/module/kvm_intel/parameters/ept
+        Y
+
+
+L1:
+    - 4 vCPU, 6G vMEM.
+    - Version:
+        $ uname -r; rpm -q qemu-kvm libvirt-daemon-kvm libguestfs
+        3.10.0-0.rc0.git26.1.fc20.x86_64
+        qemu-kvm-1.4.1-1.fc19.x86_64
+        libvirt-daemon-kvm-1.0.5-2.fc19.x86_64
+        libguestfs-1.21.35-1.fc19.x86_64
+
+
+L2:
+
+    - 3 vCPU, 3G vMEM.
+    - Version:
+        $ uname -r
+        3.9.1-301.fc19.x86_64
+
+qemu-kvm command line for L0 and L1) here:
+https://raw.github.com/kashyapc/nvmx-haswell/master/SETUP-nVMX.rst
+
+
+Build Kernel w/ defconfig on L2:
+--------------------------------
+
+    $ yum install git gcc -y
+    $ yum-builddep kernel
+
+    $ git clone \
+      git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+
+    $ git describe
+    v3.10-rc1
+
+    $ cd linux
+
+    $ time make defconfig
+    [...]
+    real    0m30.027s
+    user    0m9.716s
+    sys     0m9.686s
+
+    $ time make
+    [...]
+    real    63m16.320s
+    user    32m28.038s
+    sys     32m21.190s
+
+
+Round-2:
+-------
+
+    $ time make clean
+    real    1m17.838s
+    user    0m28.830s
+    sys     0m42.670s
+
+    $ time make
+    real    62m53.853s
+    user    32m32.724s
+    sys     32m16.430s
+
+
+With VMCS Shadowing disabled on L0
+----------------------------------
+
+

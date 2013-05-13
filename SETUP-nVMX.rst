@@ -80,8 +80,8 @@ Table of Contents
 On the physical host (L0), install the development tools to get `koji`
 cli, & then install latest the latest kernel::
     
-    # Install RPM Development Tools to get koji pkgs $ yum groupinstall
-    "RPM Development Tools"
+    # Install RPM Development Tools to get koji pkgs 
+    $ yum groupinstall "RPM Development Tools"
 
     # Find the latest kernel (which has shadow VMCS support & nVMX
     improvements - From upstream KVM git tag 3.10.1)
