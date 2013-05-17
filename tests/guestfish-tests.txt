@@ -1,0 +1,152 @@
+# Test to measure guestfish performance: http://libguestfs.org/guestfs-performance.1.html
+# 
+
+Run the below command:
+
+    $ time guestfish -a /dev/null run
+
+NOTE: Discard the first few results, to get a hot cache.
+
+1/ L0. with L1 running. 
+
+    Results:
+    ========
+
+    Runs {1..10}:    
+
+    $ for i in {1..10}; do time guestfish -a /dev/null run; done
+    real    0m28.277s
+    user    0m11.028s
+    sys     0m0.706s
+    
+    real    0m2.753s
+    user    0m0.054s
+    sys     0m0.049s
+
+    real    0m2.771s
+    user    0m0.063s
+    sys     0m0.044s
+
+    real    0m2.774s
+    user    0m0.053s
+    sys     0m0.044s
+
+    real    0m2.772s
+    user    0m0.054s
+    sys     0m0.049s
+
+    real    0m2.715s
+    user    0m0.051s
+    sys     0m0.045s
+
+    real    0m2.753s
+    user    0m0.064s
+    sys     0m0.037s
+
+    real    0m2.709s
+    user    0m0.059s
+    sys     0m0.044s
+
+    real    0m2.782s
+    user    0m0.055s
+    sys     0m0.045s
+
+    real    0m2.775s
+    user    0m0.054s
+    sys     0m0.049s
+
+
+Remove the appliance and re-run:
+
+    $ rm -rf /var/tmp/guestfs-0    
+
+    $ for in in {1..2}; do time guestfish -a /dev/null run; done
+    real    0m14.623s
+    user    0m10.172s
+    sys     0m0.520s
+
+    real    0m2.790s
+    user    0m0.048s
+    sys     0m0.046s
+
+
+2. L1 w/ nesting, VMCS shadowing enabled. NOTE: *NO* L2 guests are running
+   while this test is being performed.
+    
+    Results:
+
+    $ for i in {1..10}; do time guestfish -a /dev/null run; done | tee guestfish-timings-L1.txt
+    real    0m55.182s
+    user    0m14.747s
+    sys     0m8.501s
+    
+    real    0m8.754s
+    user    0m0.054s
+    sys     0m0.494s
+    
+    real    0m9.576s
+    user    0m0.056s
+    sys     0m0.490s
+    
+    real    0m8.793s
+    user    0m0.056s
+    sys     0m0.498s
+    
+    real    0m8.767s
+    user    0m0.053s
+    sys     0m0.492s
+    
+    real    0m8.715s
+    user    0m0.049s
+    sys     0m0.502s
+    
+    real    0m8.814s
+    user    0m0.051s
+    sys     0m0.503s
+    
+    real    0m8.765s
+    user    0m0.046s
+    sys     0m0.516s
+    
+    real    0m8.783s
+    user    0m0.050s
+    sys     0m0.502s
+    
+    real    0m8.739s
+    user    0m0.054s
+    sys     0m0.496s
+
+
+3. L1 w/ nesting, VMCS shadowing disabled.
+
+
+
+4. L1 w/o nesting, VMCS shadowing disabled.
+
+
+     # On physical host:
+     $ vi /etc/modprobe.d/dist.conf
+        - s/options kvm-intel nested=y/options kvm-intel nested=n/
+
+     # For the test purpose, remove the XML fragment (which adds VMX
+     # extensions) for L1 CPU
+     $ virsh edit regular-guest
+        - Remove the below fragment, save it:
+          <cpu mode='custom' match='exact'>
+            <model fallback='allow'>Haswell</model>
+            <feature policy='require' name='vmx'/>
+          </cpu>
+
+     # Reboot
+     $ init 6
+
+     # Check for the nested parameter
+     $ cat /sys/module/kvm_intel/parameters/nested
+     N
+
+     # Remove any old appliances
+     $ rm -rf /var/tmp/.guestfs-0
+
+     # Run the 'time' command:
+     $ for i in {1..10}; do time guestfish -a /dev/null run; done | tee \
+       guestfish-timings-L1-no-nested.txt
