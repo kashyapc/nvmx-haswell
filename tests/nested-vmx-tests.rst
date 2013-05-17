@@ -3,6 +3,7 @@ nVMX Tests
 This write up outlines the test setup and details to benchmark nested
 virtualization test with Intel.
 
+
 Terminology
 -----------
 L0 - Host Hypervisor
@@ -40,21 +41,35 @@ Tests
 Once the nested guest (L2) is up and running, the below tests can be run
 to demonstrate the current state of it:
 
+0. KVM Unit Tests
+-----------------
+- Run upstream KVM unit-tests inside L2 guest.
+
 1. CPU Intensive tests
 ----------------------
-- `kernbench` - A complile-type benchmark that compiles the Linux kernel
-   multiple times.
-   
-- Compile libguestfs. 
+- A complile-type benchmark that compiles the Linux kernel
+  multiple times.
 
+- Run multiple nested guests.
+
+    - Build upstream kernel (w/ & w/o nesting, VMCS Shadowing) on
+      L2 (to measure 'VMCS Shadowing' performance numbers). *NOTE*:
+      Use Kernels w/ debug turned off.
+        - http://thread.gmane.org/gmane.comp.emulators.kvm.devel/109746
+        - http://thread.gmane.org/gmane.comp.emulators.kvm.devel/109668
+        - Also caputure kvm_stat results
+
+    - Build upstream kernel on L1. Compare w/ L2.
+   
 2. I/O Intensive tests
 ----------------------
-- Test I/O activity inside L2 guests (Thanks to RWMJ):
+- Test I/O activity inside L2 guests (Thanks to RWMJ). This is a
+  system test, but still might be useful:
 
  For example::
 
-    $ find / -exec md5sum {} \; > /dev/null
-    $ find / -xdev -exec md5sum {} \; > /dev/null
+    $ find / -exec sha256sum {} \; > /dev/null
+    $ find / -xdev -exec sha256sum {} \; > /dev/null
 
 - Run `netperf` on L1 & L2
 
@@ -63,7 +78,9 @@ to demonstrate the current state of it:
 - On L0 & L1, run the below command. Note that the command needs to be run
   multiple times to get a hot cache::
 
-    $ time guestfish -a /dev/null run' 
+    $ for i in {1..10}; do time guestfish \
+      -a /dev/null run; done | tee \
+      guestfish-timings-L1.txt
 
 4. Live migration of a guest hypervisor
 ---------------------------------------
@@ -71,6 +88,10 @@ to demonstrate the current state of it:
 
 5. Multiple nested guests
 -------------------------
-- Run multiple nested guests
+- Run multiple nested guests to run stability
+
+
+6. System tests
+---------------
 
 
