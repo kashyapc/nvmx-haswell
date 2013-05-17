@@ -1,0 +1,18 @@
+    - TODO: Experiment (thanks Abel Gordon!) 
+        (1) Do a "short make" (that does not take more than a few
+            minutes, minimal config). 
+        (2) Then, try a "long make" to monitor consistency.
+
+    - Note that the source files will be loaded from disk only the first
+      run (lot of I/O, which is slow with nested).  Next runs may load
+      the files from the page-cache and you may notice a performance
+      improvement.
+
+    - "make clean" only removes files in file system, but does not clear
+      memory (page-cache).
+    
+        - To clean it: Either reboot L2 or set /proc/sys/vm/drop_caches as
+          below:
+
+            $ sync; echo 3 > /proc/sys/vm/drop_caches
+

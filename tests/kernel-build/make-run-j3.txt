@@ -1,0 +1,32 @@
+Run:
+
+   $ time make -j 3
+    [...]
+    Setup is 15264 bytes (padded to 15360 bytes).
+    System is 5235 kB
+    CRC 8467bf88
+    Kernel: arch/x86/boot/bzImage is ready  (#7)
+ 
+    real    9m58.091s
+    user    16m53.571s
+    sys     10m16.344s
+    $
+
+    $ make clean ; init 6
+
+    $ time make -j 3
+    Setup is 15264 bytes (padded to 15360 bytes).
+    System is 5235 kB
+    CRC 34f5c433
+    Kernel: arch/x86/boot/bzImage is ready  (#8)
+
+    real    9m59.224s
+    user    16m43.537s
+    sys     10m26.515s
+    [test@nguest-02 linux]$ 
+
+    
+Further test:
+
+    $ for i in {1..20}; do make clean; time make -j 3; done 2>&1 | tee
+        make-timings-20-iterations.txt

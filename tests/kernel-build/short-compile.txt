@@ -1,0 +1,18 @@
+# Compile with a minimal config file
+
+1. Use a minimal kernel config file
+
+3. Clear the kernel source files from memory of L2
+    - $ init 6
+    [or]
+    - $ sync; echo 3 > /proc/sys/vm/drop_caches
+
+2. Run (as L2 has 3vCPU:
+
+    $ time make -j 3
+    [...]
+    Setup is 15264 bytes (padded to 15360 bytes).
+    System is 5235 kB
+    CRC 8467bf88
+    Kernel: arch/x86/boot/bzImage is ready  (#7)
+    
