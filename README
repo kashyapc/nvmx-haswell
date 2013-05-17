@@ -1,0 +1,15 @@
+Nested VMX Testing
+==================
+
+- Nested Virtualization is the ability to run guest hypervisors (L1) --
+  running on a host hypervisor (L0) -- which can have their own
+  associated nested guests (L2).
+
+    - Nested virtualization setup: ./SETUP-nVMX.rst
+
+    - Scripts to create L1, L2: ./tests/scripts/
+
+    - Libvirt XMLs for L1, L2: ./tests/libvirt-xmls-for-l1-l2
+
+    - Further information: NOTES.rst
+
