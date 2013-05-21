@@ -63,8 +63,6 @@ Limitations from Turtles project
    a "make" process taking 87 seconds in L2, compared to 25 seconds in
    L1. With the patches in the above link, the time is down to 29
    seconds.
-      - [knoel pointed, now this is upstream] --
-        http://www.spinics.net/lists/kvm/msg87634.html
 
 2. The best measurements in the paper used exit-less VMREAD and VMWRITE,
    which was emulated in the paper and only now processors are beginning
