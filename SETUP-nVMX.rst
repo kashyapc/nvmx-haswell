@@ -143,8 +143,9 @@ Enable "nesting" on the physical host::
     reflects the value here -- /sys/module/kvm_intel/parameters/nested 
     $ modprobe kvm_intel nested=Yes
 
-To make the above value persistent across reboots. To make it persistent, add
-"options kvm-intel nested=y" to `/etc/modprobe.d/dist.conf`, & reboot the host.
+To make the above value persistent across reboots. To make it
+persistent, add "options kvm-intel nested=y" (without quotes) to
+`/etc/modprobe.d/dist.conf`, & reboot the host.
 
 
 2.4] Ensure Shadow VMCS is enabled on L0
