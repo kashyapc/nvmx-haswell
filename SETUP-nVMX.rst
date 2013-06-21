@@ -122,7 +122,7 @@ Some more info about the host hypervisor::
     libguestfs-1.21.35-1.fc19.x86_64
  
 
-2.3 Enabled Nesting on L0
+2.3] Enabled Nesting on L0
 -------------------------
 
 Enable "nesting" on the physical host::
