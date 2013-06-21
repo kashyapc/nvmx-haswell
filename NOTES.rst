@@ -17,6 +17,8 @@ Resources
     - v5 - http://comments.gmane.org/gmane.comp.emulators.kvm.devel/108401
     - v1 - http://comments.gmane.org/gmane.comp.emulators.kvm.devel/106114
 
+* nEPT patches
+    - v3 - http://comments.gmane.org/gmane.comp.emulators.kvm.devel/109548
 
 Use Cases
 ---------
