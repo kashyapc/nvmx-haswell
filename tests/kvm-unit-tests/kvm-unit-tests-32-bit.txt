@@ -1,0 +1,63 @@
+$ yum install '*/stubs-32.h'
+[...]
+
+$ make ARCH=i386 clean all
+[...]
+gcc -g -D__i386__ -I /usr/src/kernels/3.10.0-0.rc1.git5.2.fc20.x86_64/include -I../include/x86 -m32 -O1 -MMD -MF x86/.eventinj.d -g -fomit-frame-pointer -Wall  -fno-stack-protector   -I. -nostdlib -o x86/eventin
+j.elf -Wl,-T,flat.lds x86/eventinj.o x86/cstart.o lib/libcflat.a /usr/lib/gcc/x86_64-redhat-linux/4.8.0/32/libgcc.a
+objcopy -O elf32-i386 x86/eventinj.elf x86/eventinj.flat
+[...]
+
+$ time qemu-system-x86_64 -enable-kvm -device pc-testdev -serial stdio -nographic \
+-no-user-config -nodefaults -device isa-debug-exit,iobase=0xf4,iosize=0x4 -kernel \
+./x86/eventinj.flat
+[...]
+After NMI to itself
+NMI: FAIL
+Try to divide by 0
+PF running
+DE isr running divider is 0
+Result is 150
+DE PF exceptions: PASS
+Before NP test
+PF running
+NP isr running 400b5f err=18
+irq1 running
+After int33
+NP PF exceptions: PASS
+Try int 33 with shadowed stack
+irq1 running
+After int 33 with shadowed stack
+int 33 with shadowed stack: PASS
+
+summary: 14 tests, 1 failures
+
+real    0m0.589s
+user    0m0.188s
+sys     0m0.127s
+
+
+$ time qemu-system-x86_64 -enable-kvm -device pc-testdev -serial stdio -nographic \
+> -no-user-config -nodefaults -device isa-debug-exit,iobase=0xf4,iosize=0x4 -kernel \
+> ./x86/msr.flat 
+enabling apic
+MSR_IA32_APICBASE: PASS
+MSR_IA32_APICBASE: PASS
+IA32_SYSENTER_CS: PASS
+MSR_IA32_SYSENTER_ESP: PASS
+IA32_SYSENTER_EIP: PASS
+MSR_IA32_MISC_ENABLE: PASS
+MSR_IA32_CR_PAT: PASS
+MSR_FS_BASE: PASS
+MSR_GS_BASE: PASS
+MSR_KERNEL_GS_BASE: PASS
+MSR_LSTAR: PASS
+MSR_CSTAR: PASS
+MSR_SYSCALL_MASK: PASS
+13 tests, 0 failures
+
+real    0m0.499s
+user    0m0.136s
+sys     0m0.117s
+ 
+

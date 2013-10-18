@@ -1,0 +1,96 @@
+--------------------------------
+$ ./configure
+
+$ time make
+[...]
+gcc -g -D__x86_64__ -I../include/x86 -m64 -O1 -MMD -MF x86/.init.d -g -fomit-frame-pointer -Wall  -fno-stack-protector   -I. -std=gnu99 -ffreestanding -I lib -I lib/x86   -c -o x86/init.o x86/init.c
+x86/init.c: In function ‘main’:
+x86/init.c:110:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -g -D__x86_64__ -I../include/x86 -m64 -O1 -MMD -MF x86/.ini
+
+real    0m14.358s
+user    0m6.990s
+sys     0m6.639s
+--------------------------------
+
+= MSR test =
+--------------------------------
+$ time qemu-system-x86_64 -enable-kvm -device pc-testdev -serial stdio -nographic -no-user-config -nodefaults -device isa-debug-exit,iobase=0xf4,iosize=0x4 -kernel ./x86/msr.flat
+enabling apic
+MSR_IA32_APICBASE: PASS
+MSR_IA32_APICBASE: PASS
+IA32_SYSENTER_CS: PASS
+MSR_IA32_SYSENTER_ESP: PASS
+IA32_SYSENTER_EIP: PASS
+MSR_IA32_MISC_ENABLE: PASS
+MSR_IA32_CR_PAT: PASS
+MSR_FS_BASE: PASS
+MSR_GS_BASE: PASS
+MSR_KERNEL_GS_BASE: PASS
+MSR_EFER: PASS
+MSR_LSTAR: PASS
+MSR_CSTAR: PASS
+MSR_SYSCALL_MASK: PASS
+MSR_*STAR eager loading: PASS
+15 tests, 0 failures
+
+real    0m0.525s
+user    0m0.147s
+sys     0m0.121s
+--------------------------------
+
+= eventinj test = 
+--------------------------------
+$ time qemu-system-x86_64 -enable-kvm -device pc-testdev -serial stdio -nographic -no-user-config -nodefaults -device isa-debug-exit,iobase=0xf4,iosize=0x4 -kernel ./x86/eventinj.flat
+enabling apic
+paging enabled
+cr0 = 80010011
+cr3 = 7fff000
+cr4 = 20
+Try to divide by 0
+DE isr running divider is 0
+Result is 150
+DE exception: PASS
+Try int 3
+BP isr running
+After int 3
+BP exception: PASS
+Try send vec 33 to itself
+irq1 running
+After vec 33 to itself
+vec 33: PASS
+Try int $33
+irq1 running
+After int $33
+int $33: PASS
+Try send vec 32 and 33 to itself
+irq1 running
+irq0 running
+After vec 32 and 33 to itself
+vec 32/33: PASS
+Try send vec 32 and int $33
+irq1 running
+irq0 running
+After vec 32 and int $33
+vec 32/int $33: PASS
+Try send vec 33 and 62 and mask one with TPR
+irq1 running
+After 33/62 TPR test
+TPR: PASS
+irq0 running
+Try send NMI to itself
+After NMI to itself
+NMI: FAIL
+Try int 33 with shadowed stack
+irq1 running
+After int 33 with shadowed stack
+int 33 with shadowed stack: PASS
+
+summary: 9 tests, 1 failures
+
+real    0m0.586s
+user    0m0.159s
+sys     0m0.163s
+--------------------------------
