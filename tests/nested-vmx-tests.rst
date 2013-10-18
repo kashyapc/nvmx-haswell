@@ -60,8 +60,20 @@ to demonstrate the current state of it:
         - Also caputure kvm_stat results
 
     - Build upstream kernel on L1. Compare w/ L2.
+    - Some performance comparison when enable/disable VMCS shadowing
+
+2. EPT (MMU combinations)
+-------------------------
+
+- Shadow (page tables) on Shadow  -- disable EPT in L0
+   - software-only
+
+- Shadow on EPT -- EPT enabled in L0 but disabled in L1
+
+- Shadow on nEPT -- EPT enabled in L0 and L1
+
    
-2. I/O Intensive tests
+3. I/O Intensive tests
 ----------------------
 - Test I/O activity inside L2 guests (Thanks to RWMJ). This is a
   system test, but still might be useful:
@@ -73,7 +85,7 @@ to demonstrate the current state of it:
 
 - Run `netperf` on L1 & L2
 
-3. Libguestfs tests in nVMX setup
+4. Libguestfs tests in nVMX setup
 ---------------------------------
 - On L0 & L1, run the below command. Note that the command needs to be run
   multiple times to get a hot cache::
@@ -82,16 +94,16 @@ to demonstrate the current state of it:
       -a /dev/null run; done | tee \
       guestfish-timings-L1.txt
 
-4. Live migration of a guest hypervisor
+5. Live migration of a guest hypervisor
 ---------------------------------------
 - FIXME
 
-5. Multiple nested guests
+6. Multiple nested guests
 -------------------------
 - Run multiple nested guests to run stability
 
 
-6. System tests
+7. System tests
 ---------------
 
 

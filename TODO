@@ -20,9 +20,16 @@ Tests
 
         e.g. -- Measure a "make" process in L1 and L2, compare it.
 
-- Test APIC Virtualization (Intel "Haswell" doesn't have this, yet.)
+- Shadow (page tables) on Shadow  -- disable EPT in L0
+   - software-only
 
-- Efficient I/O tests -- Paravirtual IOMMU
+- Shadow on EPT -- EPT enabled in L0 but disabled in L1
+
+- Shadow on nEPT -- EPT enabled in L0 and L1
+
+- Run autotest in L1 which will try to install several different guests.
+
+- Monitor VMExit rate with and without shadow-vmcs  
 
 - Suggestion from Gleb - Try KVM unit-tests in L2.  
 
@@ -33,4 +40,8 @@ Tests
 
 - Run multiple L2 guests in an L1. Also, try several L1 guests with
   more than one L2 in each one.
+ 
+- Test APIC Virtualization (Intel "Haswell" doesn't have this, yet.)
+
+- Efficient I/O tests -- Paravirtual IOMMU
 
